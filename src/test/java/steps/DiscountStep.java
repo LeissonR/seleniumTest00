@@ -33,5 +33,4 @@ public class DiscountStep extends RunCucumberTest {
 	public void eu_vejo_o_código_de_desconto() {
 		homePage.verificarCupomDesconto("QAZANDO15OFF");
 	}
-
 }

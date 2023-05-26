@@ -42,4 +42,5 @@ public class HomePage {
 		String texto_cupom = driver.findElement(By.cssSelector("#cupom > h2 > span")).getText();
 		assertEquals(cupomDesconto, texto_cupom, "O cupom está errado!");
 	}
+
 }
