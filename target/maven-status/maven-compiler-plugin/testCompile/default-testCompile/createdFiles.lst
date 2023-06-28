@@ -1,3 +1,4 @@
-runner\SpringConfig.class
 runner\RunCucumberTest.class
 steps\DiscountStep.class
+support\Utils.class
+pages\HomePage.class
