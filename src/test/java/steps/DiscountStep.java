@@ -33,4 +33,20 @@ public class DiscountStep extends RunCucumberTest {
 	public void eu_vejo_o_código_de_desconto() {
 		homePage.verificarCupomDesconto("QAZANDO15OFF");
 	}
+
+	@Dado("que tenho cupom")
+	public void que_tenho_cupom() {
+		homePage.acessarAplicacao();
+		homePage.scrollDown();
+		homePage.preencheEmail("contatoqazando@gmail.com");
+		homePage.clickNoLogo(); // Clica fora para habilitar o botão "Ganhar Cupom"
+		homePage.clickGanharDesconto();
+		homePage.verificarCupomDesconto("QAZANDO15OFF");
+	}
+
+	@Quando("eu falho")
+	public void eu_falho() {
+		homePage.clickNoLogo(); // Clica fora para habilitar o botão "Ganhar Cupom"
+		homePage.clickGanharDescontoFake();
+	}
 }

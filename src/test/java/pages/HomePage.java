@@ -41,6 +41,10 @@ public class HomePage extends Utils{
 		driver.findElement(By.id("button")).click();
 	}
 
+	public void clickGanharDescontoFake() {
+		driver.findElement(By.id("buttonX")).click();
+	}
+	
 	public void verificarCupomDesconto(String cupomDesconto) {
 		String texto_cupom = driver.findElement(By.cssSelector("#cupom > h2 > span")).getText();
 		assertEquals(cupomDesconto, texto_cupom, "O cupom está errado!");

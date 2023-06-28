@@ -14,7 +14,7 @@ import io.cucumber.spring.CucumberContextConfiguration;
 @CucumberOptions(
 		plugin = {"json:target/reports/cucumberReport.json", "html:target/reports/cucumberReport.html"}, 
 		features = "C:/Users/leiss/Documents/Temp/08-Qzando-test/seleniumTest/src/test/resources/features",
-		// tags = {"~@ignore"},
+		tags = "@gerar-cupom",
 		glue = { "steps" })
 
 @CucumberContextConfiguration
